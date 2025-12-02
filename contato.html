@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | BRNFarias</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Cabeçalho (Mesmo do Index) -->
+    <header>
+        <div class="container">
+            <h1 class="logo">BRN<span>Farias</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#projetos">Projetos</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Principal de Contato -->
+    <section class="contact-page">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Escolha a melhor forma de falar comigo.</p>
+
+            <div class="contact-grid">
+                
+                <!-- CARD 1: WHATSAPP -->
+                <div class="contact-card">
+                    <div class="icon-header whatsapp-color">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Mensagem Rápida</h3>
+                    <p>Envie uma mensagem direta para meu WhatsApp.</p>
+                    
+                    <div class="input-group">
+                        <textarea id="msg-whatsapp" placeholder="Escreva sua mensagem aqui..."></textarea>
+                    </div>
+                    <!-- O JavaScript no final ativa este botão -->
+                    <button onclick="enviarWhatsApp()" class="btn btn-whatsapp">
+                        Enviar para WhatsApp <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+
+                <!-- CARD 2: E-MAIL (FORMSPREE) -->
+                <div class="contact-card">
+                    <div class="icon-header email-color">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Envie um E-mail</h3>
+                    <p>Responderei o mais breve possível.</p>
+
+                    <!-- IMPORTANTE: Substitua o ACTION abaixo pelo seu link do Formspree -->
+                    <form action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST">
+                        <div class="input-group">
+                            <input type="text" name="name" placeholder="Seu Nome" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" name="email" placeholder="Seu E-mail" required>
+                        </div>
+                        <div class="input-group">
+                            <textarea name="message" placeholder="Sua mensagem..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-email">
+                            Enviar E-mail <i class="fas fa-envelope-open-text"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2025 BRNFarias.</p>
+        </div>
+    </footer>
+
+    <!-- Script para funcionalidade do WhatsApp -->
+    <script>
+        function enviarWhatsApp() {
+            // 1. Coloque seu número aqui (com código do país 55 e DDD)
+            // Exemplo: 5511999999999
+            const telefone = "5511995171415"; 
+
+            // 2. Pega o texto do campo
+            const texto = document.getElementById("msg-whatsapp").value;
+
+            // 3. Verifica se tem texto
+            if(texto === "") {
+                alert("Por favor, digite uma mensagem antes de enviar.");
+                return;
+            }
+
+            // 4. Cria o link e abre em nova aba
+            const url = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+</html>

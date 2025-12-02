@@ -1,100 +1,125 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Breno Farias</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | BRNFarias</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonte Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Ícones (FontAwesome) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-  <div class="container">
+
+    <!-- Cabeçalho -->
     <header>
-      <h1><span class="highlight">Breno Farias</span> ⚽</h1>
-      <div class="subtitle" id="text"></div>
-      
+        <div class="container">
+            <h1 class="logo">BRN<span>Farias</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section class="about">
-      <h2>Sobre Mim</h2>
-      <div class="about-content">
-        <pre>
-I am studying at Senai Paulo Antonio Skaf, pursuing a technical course in Computer Networks.
-My goal is to become a competitor in World Skills, so I am consistently dedicated to my studies
-to make that happen. I completed high school last year at Etec, specializing in Internet Computing,
-which further fueled my interest in this field. I aspire to become a Cloud Computing specialist.
-
-While my childhood dream was to become a professional football player, circumstances led me in a 
-different direction. Now, I am actively seeking job opportunities to gain valuable work experience,
-enhance my skills, and improve my financial situation. Thank you for reading this far! 😅
-        </pre>
-        <img align="right" height="180" weight="180" src="https://cdn.pixabay.com/animation/2024/04/14/23/56/23-56-18-870_512.gif"/>
-      </div>
+    <!-- Seção Hero (Apresentação) -->
+    <section class="hero">
+        <div class="container">
+            <h2>Olá, eu sou Breno Farias</h2>
+            <p>Desenvolvedor Full Stack em formação. Este repositório documenta minha jornada de aprendizado em Front-End, Back-end e DevOps.</p>
+            
+            <div class="hero-buttons">
+                <!-- BOTÃO CREDLY -->
+                <a href="https://www.credly.com/users/breno-farias/badges#credly" target="_blank" class="btn btn-secondary">
+                    <i class="fas fa-certificate"></i> Minhas Certificações
+                </a>
+            </div>
+        </div>
     </section>
 
-    <section class="tech-stack">
-      <h2>Tech Stack</h2>
-      <div class="icons">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" />
-        <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/AWS-Dark.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" />
-      </div>
+    <!-- Seção Sobre -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <h3>Sobre Mim</h3>
+            <p>
+                Sou apaixonado por tecnologia e estou construindo minha base em desenvolvimento web. 
+                Aqui você encontrará desde meus primeiros exercícios de tags HTML até layouts mais complexos e responsivos.
+                O objetivo deste portfólio é mostrar minha evolução constante.
+            </p>
+        </div>
     </section>
 
-      <div class="certifications">
-    
-        <a href="https://www.credly.com/users/breno-farias" target="_blank">
-            <img src="https://i.ibb.co/yBZ4Wjqq/golden-trophy-cup-in-pixel-art-style.png"/>
-          </a>
-        Confira minhas certificações
+    <!-- Galeria de Projetos -->
+    <section id="projetos" class="projects">
+        <div class="container">
+            <h3>Meus Projetos & Exercícios</h3>
+            <div class="grid">
+                
+                <!-- PROJETO 1 -->
+                <!-- Atualize o href para o caminho da sua pasta, ex: "exercicio1/index.html" -->
+                <div class="card">
+                    <div class="card-content">
+                        <h4>Formulário de Cadastro</h4>
+                        <p>Exercício focado em inputs, labels e validações básicas de HTML5.</p>
+                        <a href="./caminho-da-sua-pasta/index.html" class="btn-sm" target="_blank">Visualizar</a>
+                    </div>
+                </div>
+
+                <!-- PROJETO 2 -->
+                <div class="card">
+                    <div class="card-content">
+                        <h4>Tabelas Complexas</h4>
+                        <p>Estruturação de dados utilizando thead, tbody e mesclagem de células.</p>
+                        <a href="./caminho-da-sua-pasta/index.html" class="btn-sm" target="_blank">Visualizar</a>
+                    </div>
+                </div>
+
+                <!-- PROJETO 3 -->
+                <div class="card">
+                    <div class="card-content">
+                        <h4>Landing Page Simples</h4>
+                        <p>Uma página de vendas criada apenas com HTML semântico e CSS básico.</p>
+                        <a href="./caminho-da-sua-pasta/index.html" class="btn-sm" target="_blank">Visualizar</a>
+                    </div>
+                </div>
+
+                <!-- Adicione mais cards conforme você cria novas pastas -->
+                 <div class="card">
+                    <div class="card-content">
+                        <h4>Outros Experimentos</h4>
+                        <p>Testes variados de tags e estilização.</p>
+                        <a href="#" class="btn-sm">Em breve</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+  <footer id="contato">
+    <div class="container">
+        <h3>Vamos conversar?</h3>
         
+        <div class="social-links">
+            <a href="https://github.com/BRNFarias" target="_blank" class="link-item">
+                <img src="img/github-outline-svgrepo-com.svg" alt="GitHub Logo">
+                GitHub
+            </a>
 
+            <span class="separator">|</span>
+
+            <a href="https://www.linkedin.com/in/brenorfarias" target="_blank" class="link-item">
+                <img src="img/linkedin-svgrepo-com.svg" alt="LinkedIn Logo">
+                LinkedIn
+            </a>
+        </div>
+
+        <p class="copyright">&copy; 2025 BRNFarias. Desenvolvido com HTML & CSS.</p>
     </div>
-    <div class="project">
-    <h2>
-        Projects
-    </h2>
-    </div>
-    <div class="caixas">
-    <a href="./Pages/projeto1.html" class="box">Projeto 1</a>
-    <a href="./Pages/projeto2.html" class="box">Projeto 2</a>
-    <a href="./Pages/projeto3.html" class="box">Projeto 3</a>
-    <a href="./Pages/projeto4.html" class="box">Projeto 4</a>
-    <a href="./Pages/projeto5.html" class="box">Projeto 5</a>
-    </div>
-<br>    
-  </div>
-     
-</body>
-<footer>
-<div class="contact">
-        <h2>
-          Contact Me
-        </h2>
-        <a href="https://www.linkedin.com/in/brenorfarias/">
-        <img class ="img" src="./img/linkedin-original.svg" alt="LinkedIn" />
-        </a>
-      
-        <a href="mailto:bfarias088@gmail.com">
-        <img class ="img" src="./img/icons8-gmail.svg" alt="Gmail" />
-        </a>
-     </div>
 </footer>
+</body>
 </html>
