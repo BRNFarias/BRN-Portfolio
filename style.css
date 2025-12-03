@@ -340,3 +340,32 @@ footer {
 .btn-email:hover {
     background-color: #0056b3;
 }
+
+/* --- Estilo Específico do Sobre Mim --- */
+
+/* Centraliza o texto e limita a largura para não cansar a leitura */
+.about-content {
+    max-width: 800px;      /* Largura máxima ideal para leitura */
+    margin: 0 auto;        /* Centraliza o bloco na tela */
+    text-align: justify;   /* Deixa o texto "quadradinho" nas laterais */
+    background: #fff;      /* Fundo branco para destacar do cinza */
+    padding: 40px;         /* Espaço interno */
+    border-radius: 10px;   /* Cantos arredondados */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra leve */
+}
+
+/* Estilo dos parágrafos */
+.about-content p {
+    margin-bottom: 20px;   /* Espaço entre os parágrafos */
+    font-size: 1.1rem;     /* Tamanho da fonte confortável */
+    line-height: 1.8;      /* Altura da linha (respiro) */
+    color: #444;           /* Cor cinza escuro (melhor que preto total) */
+}
+
+/* Ajuste para celular (tira o justificado em telas pequenas) */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 20px;
+        text-align: left; /* No celular fica melhor alinhado à esquerda */
+    }
+}
