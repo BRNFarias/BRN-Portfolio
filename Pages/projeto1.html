@@ -1,11 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Detalhes do Projeto | BRNFarias</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <style>
+        /* --- RESET E BASE --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5; /* Fundo cinza bem suave */
+            color: #333;
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+
+        /* --- BOTÃO VOLTAR FLUTUANTE --- */
+        .floating-back-btn {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .floating-back-btn:hover {
+            background: #fff;
+            color: #007bff;
+            transform: translateX(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        /* --- CONTAINER PRINCIPAL --- */
+        .main-wrapper {
+            max-width: 900px;
+            margin: 80px auto 0; /* Margem superior para não colar no topo */
+            padding: 0 20px;
+        }
+
+        /* --- TÍTULO E INTRODUÇÃO --- */
+        .project-intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .project-intro h1 {
+            font-size: 2.5rem;
+            color: #222;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .project-intro p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- CARD DO PROJETO --- */
+        .project-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08); /* Sombra suave e moderna */
+        }
+
+        /* --- ÁREA DO VÍDEO --- */
+        .video-container {
+            width: 100%;
+            background: #000;
+            position: relative;
+        }
+
+        video {
+            width: 100%;
+            display: block;
+            max-height: 550px; /* Altura máxima para monitores grandes */
+        }
+
+        /* --- CONTEÚDO DO TEXTO --- */
+        .content-body {
+            padding: 50px;
+        }
+
+        /* Tags Estilizadas */
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center; /* Centraliza as tags */
+        }
+
+        .tech-tag {
+            background: #eef2ff;
+            color: #4361ee;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* Textos */
+        .description h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #2b2b2b;
+            border-left: 5px solid #4361ee; /* Detalhe visual azul */
+            padding-left: 15px;
+        }
+
+        .description p {
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        /* Caixa de Aprendizados */
+        .learning-box {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .learning-box h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .learning-box ul {
+            list-style: none;
+            padding-left: 10px;
+        }
+
+        .learning-box ul li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 25px;
+            color: #444;
+        }
+
+        .learning-box ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        /* Botões de Ação */
+        .action-area {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: #4361ee;
+            color: white;
+            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #304ffe;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #ddd;
+            color: #555;
+        }
+
+        .btn-outline:hover {
+            border-color: #4361ee;
+            color: #4361ee;
+            background: #fff;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .content-body { padding: 30px 20px; }
+            .project-intro h1 { font-size: 2rem; }
+            .floating-back-btn { top: 15px; left: 15px; padding: 8px 15px; }
+        }
+    </style>
 </head>
 <body>
-    testeeeeeeee
+
+    <a href="../index.html" class="floating-back-btn">
+        <i class="fas fa-arrow-left"></i> Voltar
+    </a>
+
+    <div class="main-wrapper">
+        
+        <div class="project-intro">
+            <h1>API de Gestão com Python</h1>
+            <p>Arquitetura moderna utilizando FastAPI, Docker e bancos híbridos.</p>
+        </div>
+
+        <div class="project-card">
+            
+            <div class="video-container">
+                <video controls autoplay muted loop>
+                    <source src="videos/demonstraçãoAD.mp4" type="video/mp4">
+                    Seu navegador não suporta a reprodução de vídeos.
+                </video>
+            </div>
+
+            <div class="content-body">
+                
+                <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Docker</span>
+                </div>
+
+                <div class="description">
+                    <h2>Visão Geral</h2>
+                    <p>
+                        Este projeto consiste em uma API robusta desenvolvida para gerenciar dados corporativos, demonstrando o poder do ecossistema Python moderno. O objetivo foi criar uma solução escalável, containerizada e fácil de manter.
+                    </p>
+                    <p>
+                        A aplicação utiliza uma arquitetura híbrida de banco de dados: o <strong>PostgreSQL</strong> cuida dos dados relacionais e transacionais (como usuários e pedidos), enquanto o <strong>MongoDB</strong> é utilizado para armazenar logs de sistema e dados não estruturados, garantindo alta performance na escrita.
+                    </p>
+                </div>
+
+                <div class="learning-box">
+                    <h3><i class="fas fa-rocket" style="color: #4361ee;"></i> Destaques Técnicos</h3>
+                    <ul>
+                        <li>Implementação de rotas assíncronas com <strong>FastAPI</strong> para alta performance.</li>
+                        <li>Orquestração completa do ambiente de desenvolvimento usando <strong>Docker Compose</strong>.</li>
+                        <li>Sistema de autenticação JWT (JSON Web Token) para segurança dos endpoints.</li>
+                        <li>Documentação automática da API gerada pelo Swagger UI.</li>
+                    </ul>
+                </div>
+
+                <div class="action-area">
+                    <a href="https://github.com/BRNFarias/ACTIVE-DIRECTORY-AUTOMATION" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> Ver Código no GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/brenorfarias" target="_blank" class="btn btn-outline">
+                        <i class="fab fa-linkedin"></i> Ver no LinkedIn
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
